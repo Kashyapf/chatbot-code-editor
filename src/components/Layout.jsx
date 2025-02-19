@@ -5,12 +5,13 @@ import Chatbot from "./chatbot";
 
 
 const Layout = () => {
-  // useEffect(() => {
-  //   const isAuthenticated = localStorage.getItem("isAuthenticated");
-  //   if (!isAuthenticated) {
-  //     navigate("/login"); // Redirect to login if not authenticated
-  //   }
-  // }, [navigate]);
+    // uncomment for protected route to dashbaord
+  useEffect(() => {
+    const isAuthenticated = localStorage.getItem("isAuthenticated");
+    if (!isAuthenticated) {
+      navigate("/login"); // Redirect to login if not authenticated
+    }
+  }, [navigate]);
   
   return (
     <div className="h-screen bg-gray-50">
