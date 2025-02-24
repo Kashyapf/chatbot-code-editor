@@ -118,7 +118,7 @@ const CodeEditor = () => {
       </div>
 
       {/* Terminal Section */}
-      <div className="flex flex-col mt-4 w-full bg-gray-50 rounded-xl border border-solid">
+      <div className="flex flex-col mt-2 w-full bg-gray-50 rounded-xl border border-solid">
         <div className="flex justify-between items-center p-2 border-b border-gray-300">
           <h2 className="font-semibold ">Terminal</h2>
           <Button

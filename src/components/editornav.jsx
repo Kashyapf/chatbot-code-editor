@@ -5,7 +5,7 @@ const Navbar = () => {
   const navigate = useNavigate();
   return (
     
-    <nav className="bg-black text-white px-8 py-4 flex justify-between items-center">
+    <nav className="bg-black text-white px-8 py-2 flex justify-between items-center">
     <div className="text-lg font-bold">Code Editor</div>
     
     <button onClick={() => navigate("/login")} className="text-slate-100  py-2 font-medium tracking-wide text-lg flex items-center space-x-2">

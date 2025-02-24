@@ -5,15 +5,20 @@ import Signup from "./components/Signup";
 import VerifyOtp from "./components/verify_otp";
 import ResetPass from "./components/resetpass";
 import Layout from "./components/layout"
+import Courses from "./Pages/discover-courses"
+import CourseDetails from "./Pages/Course-details"
+import NavBar from "./Pages/NavBar";
 
 // For protected Route to layout uncomment it 
 
 import { Navigate } from "react-router-dom";
+import DiscoverCourse from "./Pages/discover-courses";
+import courseDetails from "./Pages/Course-details";
 
-function PrivateRoute({ children }) {
-  const isAuthenticated = localStorage.getItem("isAuthenticated");
-  return isAuthenticated ? children : <Navigate to="/login" />;
-}
+// function PrivateRoute({ children }) {
+//   const isAuthenticated = localStorage.getItem("isAuthenticated");
+//   return isAuthenticated ? children : <Navigate to="/login" />;
+// }
 
 function App() {
   return (
@@ -26,7 +31,11 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/reset-password" element={<ResetPass />} /> */
         {/* <Route path="/Layout" element={<Layout />} /> */}
-        <Route path="/layout" element={<PrivateRoute><Layout /></PrivateRoute>} />
+        <Route path="/discover-Courses" element={<Courses />} />
+        <Route path="/Nav" element={<NavBar />} />
+        <Route path="/Course-detail" element={<CourseDetails />} />
+        
+        {/* <Route path="/layout" element={<PrivateRoute><Layout /></PrivateRoute>} /> */}
 
       </Routes>
     </Router>
